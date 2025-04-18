@@ -140,7 +140,7 @@ flutter pub run build_runner build --delete-conflicting-outputs
 
 1.  **Install Flutter:** Ensure you have the Flutter SDK installed ([Flutter installation guide](https://docs.flutter.dev/get-started/install)).
 2.  **Install IDE & Plugins:** Set up VS Code or IntelliJ/Android Studio with the recommended plugins (See Section 5).
-3.  **Clone:** `git clone <repository-url>` and `cd <project-directory>`
+3.  **Clone:** `git clone https://github.com/thangpn0207/basic_clean_architechture.git` and `cd <project-directory>`
 4.  **Install Dependencies:** `flutter pub get`
 5.  **Configure Environment:** Set API keys, base URLs (check `core/di/` modules), etc., if required.
 6.  **Run Code Generation:** (See Section 7)
