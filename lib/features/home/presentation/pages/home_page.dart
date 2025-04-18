@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../core/routes/app_router.dart';
 import '../../../authentication/presentation/bloc/auth_bloc.dart';
 import '../../../authentication/presentation/bloc/auth_event.dart';
 import '../../../authentication/presentation/bloc/auth_state.dart';
@@ -20,7 +21,7 @@ class HomePage extends StatelessWidget {
             onPressed: () {
               // Dispatch logout event
               context.read<AuthBloc>().add(LogoutRequested());
-              context.go('/login'); // Navigate to login page
+              context.go(AppRoutes.login); // Navigate to login page
             },
           )
         ],

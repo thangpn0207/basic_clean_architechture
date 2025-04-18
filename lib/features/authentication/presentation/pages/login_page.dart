@@ -1,15 +1,16 @@
+import 'package:base_clean_architechture/core/routes/app_router.dart';
 import 'package:base_clean_architechture/features/authentication/presentation/pages/widgets/login_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../bloc/auth_bloc.dart';
-import '../bloc/auth_state.dart'; // Adjust import path
+import '../bloc/auth_state.dart';
 
 
 class LoginPage extends StatelessWidget {
 
 
-  LoginPage({super.key});
+  const LoginPage({super.key});
 
 
   @override
@@ -23,7 +24,7 @@ class LoginPage extends StatelessWidget {
                 SnackBar(content: Text(state.message)),
               );
             } else if (state is Authenticated) {
-              context.go('/home'); // Navigate to home page on successful login
+              context.go(AppRoutes.home); // Navigate to home page on successful login
             }
           },
         builder: (context, state) {
