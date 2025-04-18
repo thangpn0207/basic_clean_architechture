@@ -1,6 +1,5 @@
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../../../core/error/exceptions.dart';
 import '../models/user_model.dart'; // For caching user data if needed
 import 'dart:convert'; // For encoding/decoding user map
 
