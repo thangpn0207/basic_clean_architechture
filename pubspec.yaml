@@ -1,0 +1,85 @@
+name: base_clean_architechture
+description: "A new Flutter project base clean architechture."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.19.0 # For internationalization and formatting
+  intl_utils: ^2.8.10 # For generating localization files
+  go_router: ^12.1.1 # For navigation and routing
+  equatable: ^2.0.5 # For value equality in Dart objects
+  bloc: ^9.0.0 # Core Bloc library for state management
+  flutter_bloc: ^9.1.0
+  flutter_screenutil: ^5.9.1 # For responsive UI design
+  flutter_svg: ^2.0.7 # For rendering SVG images
+  flutter_form_builder: ^10.0.1 # For building forms in Flutter
+  form_builder_validators: ^11.1.2 # Validators for form fields
+  get_it: ^7.6.4 # Dependency injection
+  injectable: ^2.3.2 # Code generation for dependency injection
+  cupertino_icons: ^1.0.8 # iOS-style icons
+  logger: ^2.0.2+1
+  freezed_annotation: ^3.0.0
+
+  dartz: ^0.10.1
+  # Network
+  dio: ^5.3.3
+  pretty_dio_logger: ^1.3.1
+  connectivity_plus: ^6.1.3
+
+  # Local storage
+  shared_preferences: ^2.5.3
+  uuid: ^4.5.1
+
+
+# Development dependencies
+dev_dependencies:
+  flutter_test:
+    sdk: flutter # For testing Flutter applications
+  injectable_generator: ^2.7.0 # Code generator for injectable
+  flutter_lints: ^5.0.0 # Recommended lint rules for Flutter
+  build_runner: any # For code generation
+  freezed: ^3.0.6
+  json_serializable: ^6.9.4
+# Flutter-specific configurations
+dependency_overrides:
+  analyzer: 7.3.0
+flutter:
+  uses-material-design: true # Enables Material Icons
+
+  # Assets directory
+  assets:
+    - assets/icons/
+
+# Flutter Intl configuration for localization
+flutter_intl:
+  enabled: true # Enables Flutter Intl
+  class_name: S # Name of the generated localization class
+  main_locale: en # Main locale for the application
+  arb_dir: lib/core/locale/l10n # Directory for ARB resource files
+  output_dir: lib/core/locale/generated # Directory for generated localization files
